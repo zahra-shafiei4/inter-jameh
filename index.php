@@ -267,48 +267,54 @@ if ( is_home() ):
 </header>
 
 <main class="dark:bg-dark-850 z-10 pt-24">
-
-  <!-- Hero slider section -->
-  <section class="relative group">
-    <div class="container">
+  <!-- slider section -->
+  <section class="container relative mx-auto">
+    <!-- slider -->
+    <div id="my-slider" class=""> 
       <div class="">
-        <div
-          class="swiper head-slider rounded-xl h-full swiper-fade swiper-initialized swiper-horizontal swiper-rtl swiper-watch-progress swiper-backface-hidden">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper max-h-64 md:max-h-[480px]" id="swiper-wrapper-10f3ed497f8eb35e4"
-            aria-live="polite">
-            <!-- Slides -->
-            <div class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active"
-              style="width: 1512px; opacity: 1; transform: translate3d(0px, 0px, 0px);" role="group" aria-label="1 / 3">
-              <img src="files/001_002.jpg" alt="" class="w-full h-64 md:h-[480px]">
-            </div>
-            <div class="swiper-slide swiper-slide-next"
-              style="width: 1512px; opacity: 0; transform: translate3d(1512px, 0px, 0px);" role="group"
-              aria-label="2 / 3">
-              <img src="files/002.jpg" alt="" class="w-full h-64 md:h-[480px]">
-            </div>
-            <div class="swiper-slide" style="width: 1512px; opacity: 0; transform: translate3d(3024px, 0px, 0px);"
-              role="group" aria-label="3 / 3">
-              <img src="files/003_002.jpg" alt="" class="w-full h-64 md:h-[480px]">
-            </div>
-          </div>
-          <!-- If we need pagination -->
-          <!-- <div class="swiper-pagination"></div> -->
-
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev swiper-button-disabled swiper-button-lock" tabindex="-1" role="button"
-            aria-label="Previous slide" aria-controls="swiper-wrapper-0c104f6ef995b9531" aria-disabled="true"></div>
-          <div class="swiper-button-next swiper-button-disabled swiper-button-lock" tabindex="-1" role="button"
-            aria-label="Next slide" aria-controls="swiper-wrapper-0c104f6ef995b9531" aria-disabled="true"></div>
-
-          <!-- If we need scrollbar -->
-          <!-- <div class="swiper-scrollbar"></div> -->
-          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-        </div>
+        <img class="max-h-96 md:max-h-[480px] sm:h-full w-full rounded-2xl" src="./assets/images/001.jpg" alt="">
+      </div>
+      <div class="">
+        <img class="max-h-96 md:max-h-[480px] sm:h-full w-full rounded-2xl" src="./assets/images/002.jpg" alt="">
+      </div>
+      <div class="">
+        <img class="max-h-96 md:max-h-[480px] sm:h-full w-full rounded-2xl" src="./assets/images/003.jpg" alt="">
+      </div>
+    </div> 
+    <!-- control buttons -->
+    <div class="controls" style="color:#3b82f6;" id="slider-controls" tabindex="0">
+      <div class="absolute top-1/2 left-0 h-12 w-12 p-2 m-2 bg-gray-100 rounded-full" style="transform: translateY(-100%);" data-controls="prev" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+        </svg>
+      </div>
+      <div class="absolute top-1/2 right-0 h-12 w-12 p-2 m-2 bg-gray-100 rounded-full" style="transform: translateY(-100%);" data-controls="next" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"  viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+        </svg>       
       </div>
     </div>
   </section>
-  <!-- End hero slider section -->
+  <script>
+    const slider = tns({
+
+          "container": '#my-slider',
+          "loop": true,
+          "items": 1,
+          "slideBy": 'page',
+          "center": true,
+          "nav": false,  
+          "mouseDrag": true,
+          "arrowKeys": true,  
+          "autoplay": true,
+          "speed": 400,
+          "autoplayButtonOutput": false,
+          "lazyload": true,
+          "controlsContainer": "#slider-controls",
+
+          });
+  </script>
+  <!-- End slider section -->
 
   <!-- Introduce section -->
   <section class="-mt-12 relative z-10 hidden lg:block">
@@ -388,22 +394,17 @@ if ( is_home() ):
           <h2 class="text-2xl font-bold">
             <?=get_term(pll_get_term( get_term_by( 'slug', 'scientific_event', 'category' )->term_id))->name;?></h2>
         </div>
-        <a href="#" class="flex items-center group">
+        <a href="#" class="flex items-center group bg-white rounded-xl">
           <span
-            class="h-10 rounded-xl leading-9 px-3 -ml-4 group-hover:-ml-3 transition-all bg-white z-10 text-sm"><?=get_term(pll_get_term( get_term_by( 'slug', 'international_news', 'category' )->term_id))->name;?></span>
-          <svg
-            class="h-10 leading-9 py-2 px-3 bg-blue-500 group-hover:bg-blue-300 transition-all rounded-tl-xl rounded-bl-xl"
-            viewBox="0 -2 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-              <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-412.000000, -933.000000)" fill="white">
-                <path
-                  d="M438,957 C438,958.104 437.104,959 436,959 L416,959 C414.896,959 414,958.104 414,957 L414,937 C414,935.896 414.896,935 416,935 L436,935 C437.104,935 438,935.896 438,937 L438,940 L440,940 L440,937 C440,934.791 438.209,933 436,933 L416,933 C413.791,933 412,934.791 412,937 L412,957 C412,959.209 413.791,961 416,961 L436,961 C438.209,961 440,959.209 440,957 L440,954 L438,954 L438,957 L438,957 Z M443,946 L421.414,946 L426.657,940.757 C427.048,940.367 427.048,939.733 426.657,939.343 C426.267,938.952 425.633,938.952 425.242,939.343 L418.343,946.242 C418.135,946.451 418.046,946.728 418.06,947 C418.046,947.272 418.135,947.549 418.343,947.758 L425.242,954.657 C425.633,955.048 426.267,955.048 426.657,954.657 C427.048,954.267 427.048,953.633 426.657,953.242 L421.414,948 L443,948 C443.553,948 444,947.553 444,947 C444,946.448 443.553,946 443,946 L443,946 Z"
-                  id="arrow-left" sketch:type="MSShapeGroup"></path>
+            class="h-10 leading-9 pl-3 transition-all z-10 text-sm"><?=get_term(pll_get_term( get_term_by( 'slug', 'international_news', 'category' )->term_id))->name;?></span>
+            <svg class=" h-10 leading-9  p-2 transition-all" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.00 512.00" xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="0.0051199900000000005">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier"> 
+                <path style="fill:#3b82f6;" d="M330.917,503.264c4.502,5.629,11.241,8.735,18.177,8.735c2.572,0,5.176-0.428,7.699-1.314 c9.328-3.271,15.569-12.077,15.569-21.96V23.273c0-9.883-6.242-18.689-15.569-21.96c-9.323-3.272-19.701-0.295-25.876,7.422 L144.737,241.468c-6.8,8.501-6.8,20.578,0,29.077L330.917,503.264z"></path>
               </g>
-            </g>
-          </svg>
-        </a>
+            </svg>        
+          </a>
       </div>
     </div>
     <!-- News section body -->
@@ -518,21 +519,16 @@ if ( is_home() ):
             <?=get_term(pll_get_term( get_term_by( 'slug', 'international-office-news', 'category' )->term_id))->name;?>
           </h2>
         </div>
-        <a href="#" class="flex items-center group">
+        <a href="#" class="flex items-center group bg-white rounded-xl">
           <span
-            class="h-10 rounded-xl leading-9 px-3 -ml-4 group-hover:-ml-3 transition-all bg-white z-10 text-sm"><?=get_term(pll_get_term( get_term_by( 'slug', 'international_news', 'category' )->term_id))->name;?></span>
-          <svg
-            class="h-10 leading-9 py-2 px-3 bg-blue-500 group-hover:bg-blue-300 transition-all rounded-tl-xl rounded-bl-xl"
-            viewBox="0 -2 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-              <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-412.000000, -933.000000)" fill="white">
-                <path
-                  d="M438,957 C438,958.104 437.104,959 436,959 L416,959 C414.896,959 414,958.104 414,957 L414,937 C414,935.896 414.896,935 416,935 L436,935 C437.104,935 438,935.896 438,937 L438,940 L440,940 L440,937 C440,934.791 438.209,933 436,933 L416,933 C413.791,933 412,934.791 412,937 L412,957 C412,959.209 413.791,961 416,961 L436,961 C438.209,961 440,959.209 440,957 L440,954 L438,954 L438,957 L438,957 Z M443,946 L421.414,946 L426.657,940.757 C427.048,940.367 427.048,939.733 426.657,939.343 C426.267,938.952 425.633,938.952 425.242,939.343 L418.343,946.242 C418.135,946.451 418.046,946.728 418.06,947 C418.046,947.272 418.135,947.549 418.343,947.758 L425.242,954.657 C425.633,955.048 426.267,955.048 426.657,954.657 C427.048,954.267 427.048,953.633 426.657,953.242 L421.414,948 L443,948 C443.553,948 444,947.553 444,947 C444,946.448 443.553,946 443,946 L443,946 Z"
-                  id="arrow-left" sketch:type="MSShapeGroup"></path>
+            class="h-10 leading-9 pl-3 transition-all z-10 text-sm"><?=get_term(pll_get_term( get_term_by( 'slug', 'international_news', 'category' )->term_id))->name;?></span>
+            <svg class=" h-10 leading-9  p-2 transition-all" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.00 512.00" xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="0.0051199900000000005">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier"> 
+                <path style="fill:#3b82f6;" d="M330.917,503.264c4.502,5.629,11.241,8.735,18.177,8.735c2.572,0,5.176-0.428,7.699-1.314 c9.328-3.271,15.569-12.077,15.569-21.96V23.273c0-9.883-6.242-18.689-15.569-21.96c-9.323-3.272-19.701-0.295-25.876,7.422 L144.737,241.468c-6.8,8.501-6.8,20.578,0,29.077L330.917,503.264z"></path>
               </g>
-            </g>
-          </svg>
+            </svg> 
         </a>
       </div>
     </div>
@@ -651,21 +647,16 @@ if ( is_home() ):
             <?=get_term(pll_get_term( get_term_by( 'slug', 'al-zahra-university-news', 'category' )->term_id))->name;?>
           </h2>
         </div>
-        <a href="#" class="flex items-center group">
+        <a href="#" class="flex items-center group bg-white rounded-xl">
           <span
-            class="h-10 rounded-xl leading-9 px-3 -ml-4 group-hover:-ml-3 transition-all bg-white z-10 text-sm"><?=get_term(pll_get_term( get_term_by( 'slug', 'international_news', 'category' )->term_id))->name;?></span>
-          <svg
-            class="h-10 leading-9 py-2 px-3 bg-blue-500 group-hover:bg-blue-300 transition-all rounded-tl-xl rounded-bl-xl"
-            viewBox="0 -2 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-              <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-412.000000, -933.000000)" fill="white">
-                <path
-                  d="M438,957 C438,958.104 437.104,959 436,959 L416,959 C414.896,959 414,958.104 414,957 L414,937 C414,935.896 414.896,935 416,935 L436,935 C437.104,935 438,935.896 438,937 L438,940 L440,940 L440,937 C440,934.791 438.209,933 436,933 L416,933 C413.791,933 412,934.791 412,937 L412,957 C412,959.209 413.791,961 416,961 L436,961 C438.209,961 440,959.209 440,957 L440,954 L438,954 L438,957 L438,957 Z M443,946 L421.414,946 L426.657,940.757 C427.048,940.367 427.048,939.733 426.657,939.343 C426.267,938.952 425.633,938.952 425.242,939.343 L418.343,946.242 C418.135,946.451 418.046,946.728 418.06,947 C418.046,947.272 418.135,947.549 418.343,947.758 L425.242,954.657 C425.633,955.048 426.267,955.048 426.657,954.657 C427.048,954.267 427.048,953.633 426.657,953.242 L421.414,948 L443,948 C443.553,948 444,947.553 444,947 C444,946.448 443.553,946 443,946 L443,946 Z"
-                  id="arrow-left" sketch:type="MSShapeGroup"></path>
+            class="h-10 leading-9 pl-3 transition-all z-10 text-sm"><?=get_term(pll_get_term( get_term_by( 'slug', 'international_news', 'category' )->term_id))->name;?></span>
+            <svg class=" h-10 leading-9  p-2 transition-all" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.00 512.00" xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="0.0051199900000000005">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier"> 
+                <path style="fill:#3b82f6;" d="M330.917,503.264c4.502,5.629,11.241,8.735,18.177,8.735c2.572,0,5.176-0.428,7.699-1.314 c9.328-3.271,15.569-12.077,15.569-21.96V23.273c0-9.883-6.242-18.689-15.569-21.96c-9.323-3.272-19.701-0.295-25.876,7.422 L144.737,241.468c-6.8,8.501-6.8,20.578,0,29.077L330.917,503.264z"></path>
               </g>
-            </g>
-          </svg>
+            </svg> 
         </a>
       </div>
     </div>
@@ -779,21 +770,16 @@ if ( is_home() ):
           <h2 class="text-2xl font-bold">
             <?=get_term(pll_get_term( get_term_by( 'slug', 'international_news', 'category' )->term_id))->name;?></h2>
         </div>
-        <a href="#" class="flex items-center group">
+        <a href="#" class="flex items-center group bg-white rounded-xl">
           <span
-            class="h-10 rounded-xl leading-9 px-3 -ml-4 group-hover:-ml-3 transition-all bg-white z-10 text-sm"><?=get_term(pll_get_term( get_term_by( 'slug', 'international_news', 'category' )->term_id))->name;?></span>
-          <svg
-            class="h-10 leading-9 py-2 px-3 bg-blue-500 group-hover:bg-blue-300 transition-all rounded-tl-xl rounded-bl-xl"
-            viewBox="0 -2 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-              <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-412.000000, -933.000000)" fill="white">
-                <path
-                  d="M438,957 C438,958.104 437.104,959 436,959 L416,959 C414.896,959 414,958.104 414,957 L414,937 C414,935.896 414.896,935 416,935 L436,935 C437.104,935 438,935.896 438,937 L438,940 L440,940 L440,937 C440,934.791 438.209,933 436,933 L416,933 C413.791,933 412,934.791 412,937 L412,957 C412,959.209 413.791,961 416,961 L436,961 C438.209,961 440,959.209 440,957 L440,954 L438,954 L438,957 L438,957 Z M443,946 L421.414,946 L426.657,940.757 C427.048,940.367 427.048,939.733 426.657,939.343 C426.267,938.952 425.633,938.952 425.242,939.343 L418.343,946.242 C418.135,946.451 418.046,946.728 418.06,947 C418.046,947.272 418.135,947.549 418.343,947.758 L425.242,954.657 C425.633,955.048 426.267,955.048 426.657,954.657 C427.048,954.267 427.048,953.633 426.657,953.242 L421.414,948 L443,948 C443.553,948 444,947.553 444,947 C444,946.448 443.553,946 443,946 L443,946 Z"
-                  id="arrow-left" sketch:type="MSShapeGroup"></path>
+            class="h-10 leading-9 pl-3 transition-all z-10 text-sm"><?=get_term(pll_get_term( get_term_by( 'slug', 'international_news', 'category' )->term_id))->name;?></span>
+            <svg class=" h-10 leading-9  p-2 transition-all" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.00 512.00" xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="0.0051199900000000005">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier"> 
+                <path style="fill:#3b82f6;" d="M330.917,503.264c4.502,5.629,11.241,8.735,18.177,8.735c2.572,0,5.176-0.428,7.699-1.314 c9.328-3.271,15.569-12.077,15.569-21.96V23.273c0-9.883-6.242-18.689-15.569-21.96c-9.323-3.272-19.701-0.295-25.876,7.422 L144.737,241.468c-6.8,8.501-6.8,20.578,0,29.077L330.917,503.264z"></path>
               </g>
-            </g>
-          </svg>
+            </svg> 
         </a>
       </div>
     </div>

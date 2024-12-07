@@ -273,10 +273,14 @@ function my_theme_assets() {
     wp_enqueue_style( 'my-theme-style2', get_template_directory_uri() . '/assets/css/fontAwesome.css', array(), '1.0', 'all' );
     wp_enqueue_style( 'my-theme-style3', get_template_directory_uri() . '/assets/css/fonts.css', array(), '1.0', 'all' );
     wp_enqueue_style( 'my-theme-style4', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css', array(), '1.0', 'all' );
+		wp_enqueue_style( 'my-theme-style5', get_template_directory_uri() . '/assets/css/tiny-slider.css', array(), '1.0', 'all' );
+
     // اضافه کردن فایل JS
-    wp_enqueue_script( 'my-theme-script5', get_template_directory_uri() . '/assets/js/alpinejs.min.js', array(), '1.0', true );
-    wp_enqueue_script( 'my-theme-script6', get_template_directory_uri() . '/assets/js/app.js', array(), '1.0', true );
-    wp_enqueue_script( 'my-theme-script7', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array(), '1.0', true );
+    wp_enqueue_script( 'my-theme-script6', get_template_directory_uri() . '/assets/js/alpinejs.min.js', array(), '1.0', true );
+    wp_enqueue_script( 'my-theme-script7', get_template_directory_uri() . '/assets/js/app.js', array(), '1.0', true );
+    wp_enqueue_script( 'my-theme-script8', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array(), '1.0', true );
+		wp_enqueue_script( 'my-theme-script9', get_template_directory_uri() . '/assets/js/tiny-slider.js', array(), '1.0', true );
+
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_assets' );
 

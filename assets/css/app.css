@@ -2042,7 +2042,7 @@ video {
 }
 
 .dark\:to-dark-900:is(.dark *) {
-  --tw-gradient-to: rgb(15 30 47/1) !important; var(--tw-gradient-to-position);
+  --tw-gradient-to:var(--tw-gradient-to-position) rgb(15 30 47/1) !important;
 }
 
 .dark\:text-black:is(.dark *) {
