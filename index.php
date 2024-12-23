@@ -161,114 +161,112 @@ if ( is_home() ):
 </div>
 <!-- End sidebar in mobile screen -->
 <header class="fixed top-0 z-20 w-full">
-  <div class="container mt-2">
-    <div
-      class="flex gap-2 items-center justify-between p-3 shadow-primary rounded-xl bg-white/90 relative z-20 backdrop-blur-lg border-b border-slate-200 w-full dark:border-slate-800 dark:bg-dark-800">
-      <div class="md:hidden">
-        <button id="sidebar-btn" class="text-2xl dark:text-slate-400">
-          <i class="fa-regular fa-bars"></i>
-        </button>
+  <div
+    class="flex gap-2 items-center justify-between p-3 shadow-primary bg-white/90 relative z-20 backdrop-blur-lg border-b border-slate-200 w-full dark:border-slate-800 dark:bg-dark-800">
+    <div class="md:hidden">
+      <button id="sidebar-btn" class="text-2xl dark:text-slate-400">
+        <i class="fa-regular fa-bars"></i>
+      </button>
+    </div>
+    <div>
+      <img src="files/logo-dark.png" alt="logo" class="w-12 bg-white">
+    </div>
+    <div class="hidden md:block">
+      <input type="text" placeholder="جست و جو ..."
+        class="bg-slate-200 placeholder-slate-800 py-3 px-4 text-xs rounded-xl border-none outline-none w-24 md:w-80">
+    </div>
+    <div class="flex gap-4 items-center">
+      <!-- Theme switcher in mobile mode -->
+      <div
+        class="mobile__theme-switcher hidden md:block bg-gray-100 text-slate-500 p-3 rounded-full dark:bg-white/5 dark:text-white">
+        <!-- sun icon -->
+        <svg fill="currentColor" class="w-6 h-6 hidden dark:inline-block" viewBox="0 0 16 16">
+          <path
+            d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708">
+          </path>
+        </svg>
+        <!-- moon icon -->
+        <svg fill="currentColor" class="w-6 h-6 dark:hidden" viewBox="0 0 16 16">
+          <path
+            d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286">
+          </path>
+        </svg>
       </div>
-      <div>
-        <img src="files/logo-dark.png" alt="logo" class="w-12 bg-white">
-      </div>
-      <div class="hidden md:block">
-        <input type="text" placeholder="جست و جو ..."
-          class="bg-slate-200 placeholder-slate-800 py-3 px-4 text-xs rounded-xl border-none outline-none w-24 md:w-80">
-      </div>
-      <div class="flex gap-4 items-center">
-        <!-- Theme switcher in mobile mode -->
-        <div
-          class="mobile__theme-switcher hidden md:block bg-gray-100 text-slate-500 p-3 rounded-full dark:bg-white/5 dark:text-white">
-          <!-- sun icon -->
-          <svg fill="currentColor" class="w-6 h-6 hidden dark:inline-block" viewBox="0 0 16 16">
+      <!-- End theme switcher in mobile mode -->
+
+      <!-- sign up / login in mobile mode -->
+      <div class="md:hidden bg-gray-100 text-slate-500 rounded-full dark:bg-white/5 dark:text-white">
+        <!-- sign up / login icon -->
+        <a class="block p-3 rounded-full" href="#">
+          <svg fill="currentColor" class="w-6 h-6" viewBox="0 0 16 16">
+            <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"></path>
             <path
-              d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708">
+              d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117M11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z">
             </path>
           </svg>
-          <!-- moon icon -->
-          <svg fill="currentColor" class="w-6 h-6 dark:hidden" viewBox="0 0 16 16">
-            <path
-              d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286">
-            </path>
-          </svg>
-        </div>
-        <!-- End theme switcher in mobile mode -->
+        </a>
+      </div>
+      <!-- End sign up / login in mobile mode -->
 
-        <!-- sign up / login in mobile mode -->
-        <div class="md:hidden bg-gray-100 text-slate-500 rounded-full dark:bg-white/5 dark:text-white">
-          <!-- sign up / login icon -->
-          <a class="block p-3 rounded-full" href="#">
-            <svg fill="currentColor" class="w-6 h-6" viewBox="0 0 16 16">
-              <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"></path>
-              <path
-                d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117M11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z">
-              </path>
-            </svg>
-          </a>
-        </div>
-        <!-- End sign up / login in mobile mode -->
-
-        <div class="hidden md:block relative" x-data="{lang: false}">
-          <span x-on:click="lang = !lang" class="bg-slate-200 py-3 space-x-4 px-3 pl-7 text-xs rounded-xl"> فارسی - fa
-          </span>
-          <ul class="absolute top-10 rounded-xl bg-slate-200 min-w-28 text-sm" x-show="lang" x-transition.origin.top=""
-            @click.outside="lang=false" style="display: none;">
-            <li
-              class="p-2 hover:text-blue-600 dark:hover:text-blue-600 transition-all duration-200 ease-linear hover:mr-2">
-              <a href="#">
-                فارسی - fa
-              </a>
-            </li>
-            <li
-              class="p-2 hover:text-blue-600 dark:hover:text-blue-600 transition-all duration-200 ease-linear hover:mr-2">
-              <a href="#">
-                انگلیسی - en
-              </a>
-            </li>
-          </ul>
-          <svg class="absolute top-1 left-2 pointer-events-none h-4 w-4" viewBox="0 0 16 16" fill="currentColor"
-            aria-hidden="true">
+      <div class="hidden md:block relative" x-data="{lang: false}">
+        <span x-on:click="lang = !lang" class="bg-slate-200 py-3 space-x-4 px-3 pl-7 text-xs rounded-xl"> فارسی - fa
+        </span>
+        <ul class="absolute top-10 rounded-xl bg-slate-200 min-w-28 text-sm" x-show="lang" x-transition.origin.top=""
+          @click.outside="lang=false" style="display: none;">
+          <li
+            class="p-2 hover:text-blue-600 dark:hover:text-blue-600 transition-all duration-200 ease-linear hover:mr-2">
+            <a href="#">
+              فارسی - fa
+            </a>
+          </li>
+          <li
+            class="p-2 hover:text-blue-600 dark:hover:text-blue-600 transition-all duration-200 ease-linear hover:mr-2">
+            <a href="#">
+              انگلیسی - en
+            </a>
+          </li>
+        </ul>
+        <svg class="absolute top-1 left-2 pointer-events-none h-4 w-4" viewBox="0 0 16 16" fill="currentColor"
+          aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </div>
+      <div class="hidden md:flex">
+        <a href="#" class="flex items-center gap-2 bg-slate-200 text-slate-800 pl-6 py-3 px-3 text-xs rounded-xl">
+          <span>ورود</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
             <path fill-rule="evenodd"
-              d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
-              clip-rule="evenodd"></path>
+              d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z">
+            </path>
+            <path fill-rule="evenodd"
+              d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z">
+            </path>
           </svg>
-        </div>
-        <div class="hidden md:flex">
-          <a href="#" class="flex items-center gap-2 bg-slate-200 text-slate-800 pl-6 py-3 px-3 text-xs rounded-xl">
-            <span>ورود</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z">
-              </path>
-              <path fill-rule="evenodd"
-                d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z">
-              </path>
-            </svg>
-          </a>
-          <a href="#"
-            class="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 transition-all text-white -mr-5 py-3 px-3 text-xs rounded-xl">
-            <span>ثبت نام</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-add"
-              viewBox="0 0 16 16">
-              <path
-                d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4">
-              </path>
-              <path
-                d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z">
-              </path>
-            </svg>
-          </a>
-        </div>
+        </a>
+        <a href="#"
+          class="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 transition-all text-white -mr-5 py-3 px-3 text-xs rounded-xl">
+          <span>ثبت نام</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-add"
+            viewBox="0 0 16 16">
+            <path
+              d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4">
+            </path>
+            <path
+              d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z">
+            </path>
+          </svg>
+        </a>
       </div>
     </div>
   </div>
 </header>
 
-<main class="dark:bg-dark-850 z-10 pt-24">
+<main class="container mx-auto dark:bg-dark-850 z-10 pt-24">
   <!-- slider section -->
-  <section class="container relative mx-auto">
+  <section class="relative">
     <!-- slider -->
     <div id="my-slider" class=""> 
       <div class="">
@@ -318,562 +316,289 @@ if ( is_home() ):
 
   <!-- Introduce section -->
   <section class="-mt-12 relative z-10 hidden lg:block">
-    <div class="container">
-      <div class="flex flex-row justify-around">
-        <div class="flex flex-row items-stretch rounded-xl bg-gradient-to-tl from-blue-600 from-50% to-slate-300">
-          <a href="#" class="flex items-center h-full text-3xl text-white p-4 ">
-            <svg fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">
-              <path
-                d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917zM8 8.46 1.758 5.965 8 3.052l6.242 2.913z">
-              </path>
-              <path
-                d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46z">
-              </path>
-            </svg>
+    <div class="flex flex-row justify-around">
+      <div class="w-80 flex flex-row items-stretch rounded-xl bg-gradient-to-tl from-blue-500 from-50% to-slate-100">
+        <a href="#" class="flex items-center h-full text-3xl text-white p-4">
+          <svg fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">
+            <path
+              d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917zM8 8.46 1.758 5.965 8 3.052l6.242 2.913z">
+            </path>
+            <path
+              d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46z">
+            </path>
+          </svg>
+        </a>
+        <h3 class="flex flex-col gap-y-2 text-sm text-white p-4 float-right">
+          <a href="#" class="w-fit px-2 py-1.5 rounded-xl text-slate-800 bg-white text-sm"> مراکز وابسته
           </a>
-          <h3 class="flex flex-col gap-y-2 text-sm text-slate-200 p-4 pr-2">
-            <a href="#" class="w-fit px-2 py-1 rounded-xl text-slate-800 bg-white text-sm"> مراکز وابسته
-            </a>
-            <a href="#">مراکز وابسته</a>
-          </h3>
-        </div>
-        <div class="flex flex-row items-stretch rounded-xl bg-gradient-to-tl from-blue-600 from-50% to-slate-300">
-          <a href="#" class="flex items-center h-full text-3xl text-white p-4">
-            <svg fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">
-              <path
-                d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022M6 8.694 1 10.36V15h5zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5z">
-              </path>
-              <path
-                d="M2 11h1v1H2zm2 0h1v1H4zm-2 2h1v1H2zm2 0h1v1H4zm4-4h1v1H8zm2 0h1v1h-1zm-2 2h1v1H8zm2 0h1v1h-1zm2-2h1v1h-1zm0 2h1v1h-1zM8 7h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zM8 5h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zm0-2h1v1h-1z">
-              </path>
-            </svg>
+          <a href="#">مراکز وابسته</a>
+        </h3>
+      </div>
+      <div class="w-80 flex flex-row items-stretch rounded-xl bg-gradient-to-tl from-blue-500 from-50% to-slate-100">
+        <a href="#" class="flex items-center h-full text-3xl text-white p-4">
+          <svg fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">
+            <path
+              d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022M6 8.694 1 10.36V15h5zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5z">
+            </path>
+            <path
+              d="M2 11h1v1H2zm2 0h1v1H4zm-2 2h1v1H2zm2 0h1v1H4zm4-4h1v1H8zm2 0h1v1h-1zm-2 2h1v1H8zm2 0h1v1h-1zm2-2h1v1h-1zm0 2h1v1h-1zM8 7h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zM8 5h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zm0-2h1v1h-1z">
+            </path>
+          </svg>
+        </a>
+        <h3 class="flex flex-col gap-y-2 text-sm text-white p-4 relative right-0">
+          <a href="#" class="w-fit px-2 py-1.5 rounded-xl text-slate-800 bg-white text-sm"> بخش های
+            مختلف </a>
+          <a href="#"> آشنایی با بخش های مختلف دانشگاه </a>
+        </h3>
+      </div>
+      <div class="w-80 flex flex-row items-stretch rounded-xl bg-gradient-to-tl from-blue-500 from-50% to-slate-100">
+        <a href="#" class="flex items-center h-full text-3xl text-white p-4">
+          <svg fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0">
+            </path>
+            <path
+              d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2">
+            </path>
+            <path
+              d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z">
+            </path>
+          </svg>
+        </a>
+        <h3 class="flex flex-col gap-y-2 text-sm text-white p-4 text-right">
+          <a href="#" class="w-fit px-2 py-1.5 rounded-xl text-slate-800 bg-white text-sm"> جذب و پذیرش
           </a>
-          <h3 class="flex flex-col gap-y-2 text-sm text-slate-200 p-4 pr-2 float-right ">
-            <a href="#" class="w-fit px-2 py-1 rounded-xl text-slate-800 bg-white text-sm"> بخش های
-              مختلف </a>
-            <a href="#"> آشنایی با بخش های مختلف دانشگاه </a>
-          </h3>
-        </div>
-        <div class="flex flex-row items-stretch rounded-xl bg-gradient-to-tl from-blue-600 from-50% to-slate-300">
-          <a href="#" class="flex items-center h-full text-3xl text-white p-4 ">
-            <svg fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0">
-              </path>
-              <path
-                d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2">
-              </path>
-              <path
-                d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z">
-              </path>
-            </svg>
-          </a>
-          <h3 class="flex flex-col gap-y-2 text-sm text-slate-200 p-4 pr-2">
-            <a href="#" class="w-fit px-2 py-1 rounded-xl text-slate-800 bg-white text-sm"> جذب و پذیرش
-            </a>
-            <a href="#"> نحوه پذیرش و زمان ثبت نام </a>
-          </h3>
-        </div>
+          <a href="#"> نحوه پذیرش و زمان ثبت نام </a>
+        </h3>
       </div>
     </div>
   </section>
   <!-- End Introduce section -->
 
-
   <!-- News section -->
   <section class="mt-10">
     <!-- News section header -->
-    <div class="container">
-      <div
-        class="flex items-center justify-between bg-gradient-to-l from-blue-200 to-transparent p-4 sm:pr-5 rounded-xl">
-        <div class="flex items-baseline sm:gap-x-3">
-          <div class="flex items-center gap-1">
-            <span class="hidden sm:inline-block w-2 h-2 bg-blue-500 rounded-full"></span>
-            <span class="hidden sm:inline-block w-3 h-3 bg-blue-500 rounded-full"></span>
-          </div>
-          <h2 class="text-2xl font-bold">
-            <?=get_term(pll_get_term( get_term_by( 'slug', 'scientific_event', 'category' )->term_id))->name;?></h2>
+    <div class="flex items-center justify-between bg-gradient-to-l from-red-200 to-transparent p-4 sm:pr-5 rounded-xl">
+      <div class="flex items-baseline sm:gap-x-3">
+        <div class="flex items-center gap-1">
+          <span class="hidden sm:inline-block w-2 h-2 bg-red-500 rounded-full"></span>
+          <span class="hidden sm:inline-block w-3 h-3 bg-red-500 rounded-full"></span>
         </div>
-        <a href="#" class="flex items-center group bg-white rounded-xl">
+        <h2 class="text-2xl font-bold">
+          <?=get_term(pll_get_term( get_term_by( 'slug', 'scientific_event', 'category' )->term_id))->name;?></h2>
+      </div>
+      <a href="#" class="flex items-center group bg-white rounded-xl">
           <span
             class="h-10 leading-9 pl-3 transition-all z-10 text-sm"><?=get_term(pll_get_term( get_term_by( 'slug', 'international_news', 'category' )->term_id))->name;?></span>
             <svg class=" h-10 leading-9  p-2 transition-all" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.00 512.00" xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="0.0051199900000000005">
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
               <g id="SVGRepo_iconCarrier"> 
-                <path style="fill:#3b82f6;" d="M330.917,503.264c4.502,5.629,11.241,8.735,18.177,8.735c2.572,0,5.176-0.428,7.699-1.314 c9.328-3.271,15.569-12.077,15.569-21.96V23.273c0-9.883-6.242-18.689-15.569-21.96c-9.323-3.272-19.701-0.295-25.876,7.422 L144.737,241.468c-6.8,8.501-6.8,20.578,0,29.077L330.917,503.264z"></path>
+                <path style="fill:#ef4444;" d="M330.917,503.264c4.502,5.629,11.241,8.735,18.177,8.735c2.572,0,5.176-0.428,7.699-1.314 c9.328-3.271,15.569-12.077,15.569-21.96V23.273c0-9.883-6.242-18.689-15.569-21.96c-9.323-3.272-19.701-0.295-25.876,7.422 L144.737,241.468c-6.8,8.501-6.8,20.578,0,29.077L330.917,503.264z"></path>
               </g>
             </svg>        
           </a>
-      </div>
     </div>
     <!-- News section body -->
-    <div class="container">
-      <div class="mt-6 rounded-xl bg-gradient-to-br from-transparent from-60% to-blue-200 dark:to-dark-900">
-        <!-- Start news slider -->
-        <div class="swiper news-slider p-5 swiper-initialized swiper-horizontal swiper-rtl swiper-backface-hidden">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper" id="swiper-wrapper-6e077e1052bb863d1" aria-live="polite">
-            <!-- Slides -->
+    <div class="mt-6 rounded-xl bg-gradient-to-br from-transparent from-60% to-red-200 dark:to-dark-900">
+      <!-- Start news slider -->
+      <div class="swiper news-slider p-5 swiper-initialized swiper-horizontal swiper-rtl swiper-backface-hidden">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper" id="swiper-wrapper-6e077e1052bb863d1" aria-live="polite">
+          <!-- Slides -->
 
-            <?php
-                            // گرفتن زبان فعلی با استفاده از Polylang
-                            $current_lang = pll_current_language();
+          <?php
+                          // گرفتن زبان فعلی با استفاده از Polylang
+                          $current_lang = pll_current_language();
 
-                            // تنظیمات WP_Query برای گرفتن پست‌های یک دسته‌بندی خاص
-                            $args = array(
-                                'post_type' => 'post', // نوع پست (پست‌های استاندارد)
-                                'posts_per_page' => 5, // تعداد پست‌ها
-                                'category_name' => 'scientific_event', // نام دسته‌بندی (slug)
-                                'lang' => $current_lang, // زبان فعلی
-                            );
-                            $query = new WP_Query( $args );
+                          // تنظیمات WP_Query برای گرفتن پست‌های یک دسته‌بندی خاص
+                          $args = array(
+                              'post_type' => 'post', // نوع پست (پست‌های استاندارد)
+                              'posts_per_page' => 5, // تعداد پست‌ها
+                              'category_name' => 'scientific_event', // نام دسته‌بندی (slug)
+                              'lang' => $current_lang, // زبان فعلی
+                          );
+                          $query = new WP_Query( $args );
 
-                            if ( $query->have_posts() ) : 
-                                while ( $query->have_posts() ) : $query->the_post(); 
-                                    ?>
+                          if ( $query->have_posts() ) : 
+                              while ( $query->have_posts() ) : $query->the_post(); 
+                                  ?>
 
-            <div class="swiper-slide swiper-slide-active" style="width: 356px; margin-left: 16px;" role="group"
-              aria-label="1 / 5">
-              <div class="p-4 shadow-primary rounded-2xl dark:bg-dark-800">
-                <div class="relative">
-                  <a href="<?=the_permalink()?>">
-                    <img src="<?=the_post_thumbnail_url()?>" alt="" class="w-full h-[180px] rounded-xl">
-                  </a>
-                  <div
-                    class="flex flex-col items-center w-fit shadow-lg p-3 gap-2 bg-white text-sm rounded-xl absolute left-5 -bottom-1/4">
-                    <svg fill="currentColor" class="w-4 h-4" viewBox="0 0 16 16">
-                      <path
-                        d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z">
-                      </path>
-                      <path
-                        d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5">
-                      </path>
-                    </svg>
-                    <span>۷</span>
-                  </div>
-                </div>
+          <div class="swiper-slide swiper-slide-active" style="width: 356px; margin-left: 16px;" role="group"
+            aria-label="1 / 5">
+            <div class="p-4 shadow-primary rounded-2xl dark:bg-dark-800">
+              <div class="relative">
+                <a href="<?=the_permalink()?>">
+                  <img src="<?=the_post_thumbnail_url()?>" alt="" class="w-full h-[180px] rounded-xl">
+                </a>
                 <div
-                  class="flex items-center w-fit shadow-primary text-slate-600 text-sm rounded-lg px-4 py-2 gap-2 mt-3 dark:bg-white">
+                  class="flex flex-col items-center w-fit shadow-lg p-3 gap-2 bg-white text-sm rounded-xl absolute left-5 -bottom-1/4">
                   <svg fill="currentColor" class="w-4 h-4" viewBox="0 0 16 16">
-                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"></path>
-                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"></path>
+                    <path
+                      d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z">
+                    </path>
+                    <path
+                      d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5">
+                    </path>
                   </svg>
-                  <span>۲۵ تیر ۱۴۰۳</span>
+                  <span>۷</span>
                 </div>
-                <div class="mt-3">
-                  <h3 class="line-clamp-2 dark:text-slate-200">
-                    <a href="<?=the_permalink()?>"><?=the_title()?></a>
-                  </h3>
-                  <span class="inline-block w-full border dark:border-slate-300 dark:border-opacity-10"></span>
-                  <div class="text-slate-600 text-sm/6 dark:text-slate-400">
-                    <p class="line-clamp-3"><?=the_excerpt()?></p>
-                  </div>
+              </div>
+              <div
+                class="flex items-center w-fit shadow-primary text-slate-600 text-sm rounded-lg px-4 py-2 gap-2 mt-3 dark:bg-white">
+                <svg fill="currentColor" class="w-4 h-4" viewBox="0 0 16 16">
+                  <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"></path>
+                  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"></path>
+                </svg>
+                <span>۲۵ تیر ۱۴۰۳</span>
+              </div>
+              <div class="mt-3">
+                <h3 class="line-clamp-2 dark:text-slate-200">
+                  <a href="<?=the_permalink()?>"><?=the_title()?></a>
+                </h3>
+                <span class="inline-block w-full border dark:border-slate-300 dark:border-opacity-10"></span>
+                <div class="text-slate-600 text-sm/6 dark:text-slate-400">
+                  <p class="line-clamp-3"><?=the_excerpt()?></p>
                 </div>
               </div>
             </div>
-
-            <?php
-                                endwhile;
-                                wp_reset_postdata();
-                            else :
-                                echo 'No posts found';
-                            endif;
-                            ?>
-
           </div>
 
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev swiper-button-disabled swiper-button-lock" tabindex="-1" role="button"
-            aria-label="Previous slide" aria-controls="swiper-wrapper-0c104f6ef995b9531" aria-disabled="true"></div>
-          <div class="swiper-button-next swiper-button-disabled swiper-button-lock" tabindex="-1" role="button"
-            aria-label="Next slide" aria-controls="swiper-wrapper-0c104f6ef995b9531" aria-disabled="true"></div>
+          <?php
+                              endwhile;
+                              wp_reset_postdata();
+                          else :
+                              echo 'No posts found';
+                          endif;
+                          ?>
 
-          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
         </div>
-        <!-- End news slider -->
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev swiper-button-disabled swiper-button-lock" tabindex="-1" role="button"
+          aria-label="Previous slide" aria-controls="swiper-wrapper-0c104f6ef995b9531" aria-disabled="true"></div>
+        <div class="swiper-button-next swiper-button-disabled swiper-button-lock" tabindex="-1" role="button"
+          aria-label="Next slide" aria-controls="swiper-wrapper-0c104f6ef995b9531" aria-disabled="true"></div>
+
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
       </div>
+      <!-- End news slider -->
     </div>
   </section>
   <!-- End news section -->
-
-
-
-
-
-
-
 
   <!-- News section -->
   <section class="mt-10">
     <!-- News section header -->
-    <div class="container">
-      <div
-        class="flex items-center justify-between bg-gradient-to-l from-blue-200 to-transparent p-4 sm:pr-5 rounded-xl">
-        <div class="flex items-baseline sm:gap-x-3">
-          <div class="flex items-center gap-1">
-            <span class="hidden sm:inline-block w-2 h-2 bg-blue-500 rounded-full"></span>
-            <span class="hidden sm:inline-block w-3 h-3 bg-blue-500 rounded-full"></span>
-          </div>
-          <h2 class="text-2xl font-bold">
-            <?=get_term(pll_get_term( get_term_by( 'slug', 'international-office-news', 'category' )->term_id))->name;?>
-          </h2>
+    <div class="flex items-center justify-between bg-gradient-to-l from-blue-200 to-transparent p-4 sm:pr-5 rounded-xl">
+      <div class="flex items-baseline sm:gap-x-3">
+        <div class="flex items-center gap-1">
+          <span class="hidden sm:inline-block w-2 h-2 bg-blue-500 rounded-full"></span>
+          <span class="hidden sm:inline-block w-3 h-3 bg-blue-500 rounded-full"></span>
         </div>
-        <a href="#" class="flex items-center group bg-white rounded-xl">
-          <span
-            class="h-10 leading-9 pl-3 transition-all z-10 text-sm"><?=get_term(pll_get_term( get_term_by( 'slug', 'international_news', 'category' )->term_id))->name;?></span>
-            <svg class=" h-10 leading-9  p-2 transition-all" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.00 512.00" xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="0.0051199900000000005">
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-              <g id="SVGRepo_iconCarrier"> 
-                <path style="fill:#3b82f6;" d="M330.917,503.264c4.502,5.629,11.241,8.735,18.177,8.735c2.572,0,5.176-0.428,7.699-1.314 c9.328-3.271,15.569-12.077,15.569-21.96V23.273c0-9.883-6.242-18.689-15.569-21.96c-9.323-3.272-19.701-0.295-25.876,7.422 L144.737,241.468c-6.8,8.501-6.8,20.578,0,29.077L330.917,503.264z"></path>
-              </g>
-            </svg> 
-        </a>
+        <h2 class="text-2xl font-bold">
+          <?=get_term(pll_get_term( get_term_by( 'slug', 'al-zahra-university-news', 'category' )->term_id))->name;?>
+        </h2>
       </div>
+      <a href="#" class="flex items-center group bg-white rounded-xl">
+        <span
+          class="h-10 leading-9 pl-3 transition-all z-10 text-sm"><?=get_term(pll_get_term( get_term_by( 'slug', 'international_news', 'category' )->term_id))->name;?></span>
+          <svg class=" h-10 leading-9  p-2 transition-all" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.00 512.00" xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="0.0051199900000000005">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier"> 
+              <path style="fill:#3b82f6;" d="M330.917,503.264c4.502,5.629,11.241,8.735,18.177,8.735c2.572,0,5.176-0.428,7.699-1.314 c9.328-3.271,15.569-12.077,15.569-21.96V23.273c0-9.883-6.242-18.689-15.569-21.96c-9.323-3.272-19.701-0.295-25.876,7.422 L144.737,241.468c-6.8,8.501-6.8,20.578,0,29.077L330.917,503.264z"></path>
+            </g>
+          </svg> 
+      </a>
     </div>
     <!-- News section body -->
-    <div class="container">
-      <div class="mt-6 rounded-xl bg-gradient-to-br from-transparent from-60% to-blue-200 dark:to-dark-900">
-        <!-- Start news slider -->
-        <div class="swiper news-slider p-5 swiper-initialized swiper-horizontal swiper-rtl swiper-backface-hidden">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper" id="swiper-wrapper-6e077e1052bb863d1" aria-live="polite">
-            <!-- Slides -->
+    <div class="mt-6 rounded-xl bg-gradient-to-br from-transparent from-60% to-blue-200 dark:to-dark-900">
+      <!-- Start news slider -->
+      <div class="swiper news-slider p-5 swiper-initialized swiper-horizontal swiper-rtl swiper-backface-hidden">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper" id="swiper-wrapper-6e077e1052bb863d1" aria-live="polite">
+          <!-- Slides -->
 
-            <?php
-                            // گرفتن زبان فعلی با استفاده از Polylang
-                            $current_lang = pll_current_language();
+          <?php
+                          // گرفتن زبان فعلی با استفاده از Polylang
+                          $current_lang = pll_current_language();
 
-                            // تنظیمات WP_Query برای گرفتن پست‌های یک دسته‌بندی خاص
-                            $args = array(
-                                'post_type' => 'post', // نوع پست (پست‌های استاندارد)
-                                'posts_per_page' => 5, // تعداد پست‌ها
-                                'category_name' => 'international-office-news', // نام دسته‌بندی (slug)
-                                'lang' => $current_lang, // زبان فعلی
-                            );
-                            $query = new WP_Query( $args );
+                          // تنظیمات WP_Query برای گرفتن پست‌های یک دسته‌بندی خاص
+                          $args = array(
+                              'post_type' => 'post', // نوع پست (پست‌های استاندارد)
+                              'posts_per_page' => 5, // تعداد پست‌ها
+                              'category_name' => 'al-zahra-university-news', // نام دسته‌بندی (slug)
+                              'lang' => $current_lang, // زبان فعلی
+                          );
+                          $query = new WP_Query( $args );
 
-                            if ( $query->have_posts() ) : 
-                                while ( $query->have_posts() ) : $query->the_post(); 
-                                    ?>
+                          if ( $query->have_posts() ) : 
+                              while ( $query->have_posts() ) : $query->the_post(); 
+                                  ?>
 
-            <div class="swiper-slide swiper-slide-active" style="width: 356px; margin-left: 16px;" role="group"
-              aria-label="1 / 5">
-              <div class="p-4 shadow-primary rounded-2xl dark:bg-dark-800">
-                <div class="relative">
-                  <a href="<?=the_permalink()?>">
-                    <img src="<?=the_post_thumbnail_url()?>" alt="" class="w-full h-[180px] rounded-xl">
-                  </a>
-                  <div
-                    class="flex flex-col items-center w-fit shadow-lg p-3 gap-2 bg-white text-sm rounded-xl absolute left-5 -bottom-1/4">
-                    <svg fill="currentColor" class="w-4 h-4" viewBox="0 0 16 16">
-                      <path
-                        d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z">
-                      </path>
-                      <path
-                        d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5">
-                      </path>
-                    </svg>
-                    <span>۷</span>
-                  </div>
-                </div>
+          <div class="swiper-slide swiper-slide-active" style="width: 356px; margin-left: 16px;" role="group"
+            aria-label="1 / 5">
+            <div class="p-4 shadow-primary rounded-2xl dark:bg-dark-800">
+              <div class="relative">
+                <a href="<?=the_permalink()?>">
+                  <img src="<?=the_post_thumbnail_url()?>" alt="" class="w-full h-[180px] rounded-xl">
+                </a>
                 <div
-                  class="flex items-center w-fit shadow-primary text-slate-600 text-sm rounded-lg px-4 py-2 gap-2 mt-3 dark:bg-white">
+                  class="flex flex-col items-center w-fit shadow-lg p-3 gap-2 bg-white text-sm rounded-xl absolute left-5 -bottom-1/4">
                   <svg fill="currentColor" class="w-4 h-4" viewBox="0 0 16 16">
-                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"></path>
-                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"></path>
+                    <path
+                      d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z">
+                    </path>
+                    <path
+                      d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5">
+                    </path>
                   </svg>
-                  <span>۲۵ تیر ۱۴۰۳</span>
+                  <span>۷</span>
                 </div>
-                <div class="mt-3">
-                  <h3 class="line-clamp-2 dark:text-slate-200">
-                    <a href="<?=the_permalink()?>"><?=the_title()?></a>
-                  </h3>
-                  <span class="inline-block w-full border dark:border-slate-300 dark:border-opacity-10"></span>
-                  <div class="text-slate-600 text-sm/6 dark:text-slate-400">
-                    <p class="line-clamp-3"><?=the_excerpt()?></p>
-                  </div>
+              </div>
+              <div
+                class="flex items-center w-fit shadow-primary text-slate-600 text-sm rounded-lg px-4 py-2 gap-2 mt-3 dark:bg-white">
+                <svg fill="currentColor" class="w-4 h-4" viewBox="0 0 16 16">
+                  <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"></path>
+                  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"></path>
+                </svg>
+                <span>۲۵ تیر ۱۴۰۳</span>
+              </div>
+              <div class="mt-3">
+                <h3 class="line-clamp-2 dark:text-slate-200">
+                  <a href="<?=the_permalink()?>"><?=the_title()?></a>
+                </h3>
+                <span class="inline-block w-full border dark:border-slate-300 dark:border-opacity-10"></span>
+                <div class="text-slate-600 text-sm/6 dark:text-slate-400">
+                  <p class="line-clamp-3"><?=the_excerpt()?></p>
                 </div>
               </div>
             </div>
-
-            <?php
-                                endwhile;
-                                wp_reset_postdata();
-                            else :
-                                echo 'No posts found';
-                            endif;
-                            ?>
-
           </div>
 
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev swiper-button-disabled swiper-button-lock" tabindex="-1" role="button"
-            aria-label="Previous slide" aria-controls="swiper-wrapper-0c104f6ef995b9531" aria-disabled="true"></div>
-          <div class="swiper-button-next swiper-button-disabled swiper-button-lock" tabindex="-1" role="button"
-            aria-label="Next slide" aria-controls="swiper-wrapper-0c104f6ef995b9531" aria-disabled="true"></div>
+          <?php
+                              endwhile;
+                              wp_reset_postdata();
+                          else :
+                              echo 'No posts found';
+                          endif;
+                          ?>
 
-          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
         </div>
-        <!-- End news slider -->
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev swiper-button-disabled swiper-button-lock" tabindex="-1" role="button"
+          aria-label="Previous slide" aria-controls="swiper-wrapper-0c104f6ef995b9531" aria-disabled="true"></div>
+        <div class="swiper-button-next swiper-button-disabled swiper-button-lock" tabindex="-1" role="button"
+          aria-label="Next slide" aria-controls="swiper-wrapper-0c104f6ef995b9531" aria-disabled="true"></div>
+
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
       </div>
+      <!-- End news slider -->
     </div>
   </section>
   <!-- End news section -->
-
-
-
-
-
-
-
-
-
-
-
-  <!-- News section -->
-  <section class="mt-10">
-    <!-- News section header -->
-    <div class="container">
-      <div
-        class="flex items-center justify-between bg-gradient-to-l from-blue-200 to-transparent p-4 sm:pr-5 rounded-xl">
-        <div class="flex items-baseline sm:gap-x-3">
-          <div class="flex items-center gap-1">
-            <span class="hidden sm:inline-block w-2 h-2 bg-blue-500 rounded-full"></span>
-            <span class="hidden sm:inline-block w-3 h-3 bg-blue-500 rounded-full"></span>
-          </div>
-          <h2 class="text-2xl font-bold">
-            <?=get_term(pll_get_term( get_term_by( 'slug', 'al-zahra-university-news', 'category' )->term_id))->name;?>
-          </h2>
-        </div>
-        <a href="#" class="flex items-center group bg-white rounded-xl">
-          <span
-            class="h-10 leading-9 pl-3 transition-all z-10 text-sm"><?=get_term(pll_get_term( get_term_by( 'slug', 'international_news', 'category' )->term_id))->name;?></span>
-            <svg class=" h-10 leading-9  p-2 transition-all" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.00 512.00" xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="0.0051199900000000005">
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-              <g id="SVGRepo_iconCarrier"> 
-                <path style="fill:#3b82f6;" d="M330.917,503.264c4.502,5.629,11.241,8.735,18.177,8.735c2.572,0,5.176-0.428,7.699-1.314 c9.328-3.271,15.569-12.077,15.569-21.96V23.273c0-9.883-6.242-18.689-15.569-21.96c-9.323-3.272-19.701-0.295-25.876,7.422 L144.737,241.468c-6.8,8.501-6.8,20.578,0,29.077L330.917,503.264z"></path>
-              </g>
-            </svg> 
-        </a>
-      </div>
-    </div>
-    <!-- News section body -->
-    <div class="container">
-      <div class="mt-6 rounded-xl bg-gradient-to-br from-transparent from-60% to-blue-200 dark:to-dark-900">
-        <!-- Start news slider -->
-        <div class="swiper news-slider p-5 swiper-initialized swiper-horizontal swiper-rtl swiper-backface-hidden">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper" id="swiper-wrapper-6e077e1052bb863d1" aria-live="polite">
-            <!-- Slides -->
-
-            <?php
-                            // گرفتن زبان فعلی با استفاده از Polylang
-                            $current_lang = pll_current_language();
-
-                            // تنظیمات WP_Query برای گرفتن پست‌های یک دسته‌بندی خاص
-                            $args = array(
-                                'post_type' => 'post', // نوع پست (پست‌های استاندارد)
-                                'posts_per_page' => 5, // تعداد پست‌ها
-                                'category_name' => 'al-zahra-university-news', // نام دسته‌بندی (slug)
-                                'lang' => $current_lang, // زبان فعلی
-                            );
-                            $query = new WP_Query( $args );
-
-                            if ( $query->have_posts() ) : 
-                                while ( $query->have_posts() ) : $query->the_post(); 
-                                    ?>
-
-            <div class="swiper-slide swiper-slide-active" style="width: 356px; margin-left: 16px;" role="group"
-              aria-label="1 / 5">
-              <div class="p-4 shadow-primary rounded-2xl dark:bg-dark-800">
-                <div class="relative">
-                  <a href="<?=the_permalink()?>">
-                    <img src="<?=the_post_thumbnail_url()?>" alt="" class="w-full h-[180px] rounded-xl">
-                  </a>
-                  <div
-                    class="flex flex-col items-center w-fit shadow-lg p-3 gap-2 bg-white text-sm rounded-xl absolute left-5 -bottom-1/4">
-                    <svg fill="currentColor" class="w-4 h-4" viewBox="0 0 16 16">
-                      <path
-                        d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z">
-                      </path>
-                      <path
-                        d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5">
-                      </path>
-                    </svg>
-                    <span>۷</span>
-                  </div>
-                </div>
-                <div
-                  class="flex items-center w-fit shadow-primary text-slate-600 text-sm rounded-lg px-4 py-2 gap-2 mt-3 dark:bg-white">
-                  <svg fill="currentColor" class="w-4 h-4" viewBox="0 0 16 16">
-                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"></path>
-                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"></path>
-                  </svg>
-                  <span>۲۵ تیر ۱۴۰۳</span>
-                </div>
-                <div class="mt-3">
-                  <h3 class="line-clamp-2 dark:text-slate-200">
-                    <a href="<?=the_permalink()?>"><?=the_title()?></a>
-                  </h3>
-                  <span class="inline-block w-full border dark:border-slate-300 dark:border-opacity-10"></span>
-                  <div class="text-slate-600 text-sm/6 dark:text-slate-400">
-                    <p class="line-clamp-3"><?=the_excerpt()?></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <?php
-                                endwhile;
-                                wp_reset_postdata();
-                            else :
-                                echo 'No posts found';
-                            endif;
-                            ?>
-
-          </div>
-
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev swiper-button-disabled swiper-button-lock" tabindex="-1" role="button"
-            aria-label="Previous slide" aria-controls="swiper-wrapper-0c104f6ef995b9531" aria-disabled="true"></div>
-          <div class="swiper-button-next swiper-button-disabled swiper-button-lock" tabindex="-1" role="button"
-            aria-label="Next slide" aria-controls="swiper-wrapper-0c104f6ef995b9531" aria-disabled="true"></div>
-
-          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-        </div>
-        <!-- End news slider -->
-      </div>
-    </div>
-  </section>
-  <!-- End news section -->
-
-
-
-
-
-
-
-  <!-- News section -->
-  <section class="mt-10">
-    <!-- News section header -->
-    <div class="container">
-      <div
-        class="flex items-center justify-between bg-gradient-to-l from-blue-200 to-transparent p-4 sm:pr-5 rounded-xl">
-        <div class="flex items-baseline sm:gap-x-3">
-          <div class="flex items-center gap-1">
-            <span class="hidden sm:inline-block w-2 h-2 bg-blue-500 rounded-full"></span>
-            <span class="hidden sm:inline-block w-3 h-3 bg-blue-500 rounded-full"></span>
-          </div>
-          <h2 class="text-2xl font-bold">
-            <?=get_term(pll_get_term( get_term_by( 'slug', 'international_news', 'category' )->term_id))->name;?></h2>
-        </div>
-        <a href="#" class="flex items-center group bg-white rounded-xl">
-          <span
-            class="h-10 leading-9 pl-3 transition-all z-10 text-sm"><?=get_term(pll_get_term( get_term_by( 'slug', 'international_news', 'category' )->term_id))->name;?></span>
-            <svg class=" h-10 leading-9  p-2 transition-all" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.00 512.00" xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="0.0051199900000000005">
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-              <g id="SVGRepo_iconCarrier"> 
-                <path style="fill:#3b82f6;" d="M330.917,503.264c4.502,5.629,11.241,8.735,18.177,8.735c2.572,0,5.176-0.428,7.699-1.314 c9.328-3.271,15.569-12.077,15.569-21.96V23.273c0-9.883-6.242-18.689-15.569-21.96c-9.323-3.272-19.701-0.295-25.876,7.422 L144.737,241.468c-6.8,8.501-6.8,20.578,0,29.077L330.917,503.264z"></path>
-              </g>
-            </svg> 
-        </a>
-      </div>
-    </div>
-    <!-- News section body -->
-    <div class="container">
-      <div class="mt-6 rounded-xl bg-gradient-to-br from-transparent from-60% to-blue-200 dark:to-dark-900">
-        <!-- Start news slider -->
-        <div class="swiper news-slider p-5 swiper-initialized swiper-horizontal swiper-rtl swiper-backface-hidden">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper" id="swiper-wrapper-6e077e1052bb863d1" aria-live="polite">
-            <!-- Slides -->
-
-            <?php
-                            // گرفتن زبان فعلی با استفاده از Polylang
-                            $current_lang = pll_current_language();
-
-                            // تنظیمات WP_Query برای گرفتن پست‌های یک دسته‌بندی خاص
-                            $args = array(
-                                'post_type' => 'post', // نوع پست (پست‌های استاندارد)
-                                'posts_per_page' => 5, // تعداد پست‌ها
-                                'category_name' => 'international_news', // نام دسته‌بندی (slug)
-                                'lang' => $current_lang, // زبان فعلی
-                            );
-                            $query = new WP_Query( $args );
-
-                            if ( $query->have_posts() ) :
-                                while ( $query->have_posts() ) : $query->the_post(); 
-                                    ?>
-
-            <div class="swiper-slide swiper-slide-active" style="width: 356px; margin-left: 16px;" role="group"
-              aria-label="1 / 5">
-              <div class="p-4 shadow-primary rounded-2xl dark:bg-dark-800">
-                <div class="relative">
-                  <a href="<?=the_permalink()?>">
-                    <img src="<?=the_post_thumbnail_url()?>" alt="" class="w-full h-[180px] rounded-xl">
-                  </a>
-                  <div
-                    class="flex flex-col items-center w-fit shadow-lg p-3 gap-2 bg-white text-sm rounded-xl absolute left-5 -bottom-1/4">
-                    <svg fill="currentColor" class="w-4 h-4" viewBox="0 0 16 16">
-                      <path
-                        d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z">
-                      </path>
-                      <path
-                        d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5">
-                      </path>
-                    </svg>
-                    <span>۷</span>
-                  </div>
-                </div>
-                <div
-                  class="flex items-center w-fit shadow-primary text-slate-600 text-sm rounded-lg px-4 py-2 gap-2 mt-3 dark:bg-white">
-                  <svg fill="currentColor" class="w-4 h-4" viewBox="0 0 16 16">
-                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"></path>
-                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"></path>
-                  </svg>
-                  <span>۲۵ تیر ۱۴۰۳</span>
-                </div>
-                <div class="mt-3">
-                  <h3 class="line-clamp-2 dark:text-slate-200">
-                    <a href="<?=the_permalink()?>"><?=the_title()?></a>
-                  </h3>
-                  <span class="inline-block w-full border dark:border-slate-300 dark:border-opacity-10"></span>
-                  <div class="text-slate-600 text-sm/6 dark:text-slate-400">
-                    <p class="line-clamp-3"><?=the_excerpt()?></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <?php
-                                endwhile;
-                                wp_reset_postdata();
-                            else :
-                                echo 'No posts found';
-                            endif;
-                            ?>
-
-          </div>
-
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev swiper-button-disabled swiper-button-lock" tabindex="-1" role="button"
-            aria-label="Previous slide" aria-controls="swiper-wrapper-0c104f6ef995b9531" aria-disabled="true"></div>
-          <div class="swiper-button-next swiper-button-disabled swiper-button-lock" tabindex="-1" role="button"
-            aria-label="Next slide" aria-controls="swiper-wrapper-0c104f6ef995b9531" aria-disabled="true"></div>
-
-          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-        </div>
-        <!-- End news slider -->
-      </div>
-    </div>
-  </section>
-  <!-- End news section -->
-
-
 
 
   <!-- Educatoin groups section -->
@@ -1294,7 +1019,7 @@ endif;
     ?>
 
 <footer class="dark:bg-dark-850 pt-24 pb-10">
-  <div class="container">
+  <div class="container mx-auto">
     <div class="relative">
       <span
         class="absolute border-t border-1 sm:top-2/4 top-5 trasform sm:translate-y-2/4 dark:border-slate-600 w-full z-0 right-0"></span>
