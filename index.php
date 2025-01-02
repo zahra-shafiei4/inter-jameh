@@ -160,23 +160,36 @@ if ( is_home() ):
   </div>
 </div>
 <!-- End sidebar in mobile screen -->
+
 <header class="fixed top-0 z-20 w-full">
-  <div
-    class="flex gap-2 items-center justify-between p-3 shadow-primary bg-white/90 relative z-20 backdrop-blur-lg border-b border-slate-200 w-full dark:border-slate-800 dark:bg-dark-800">
-    <div class="md:hidden">
-      <button id="sidebar-btn" class="text-2xl dark:text-slate-400">
-        <i class="fa-regular fa-bars"></i>
+  <div class="flex gap-2 items-center justify-between p-3 shadow-lg bg-white/80 relative backdrop-blur-lg border-b border-slate-200 dark:border-slate-800 dark:bg-dark-800">
+   
+    <div class="md:hidden bg-gray-100 text-slate-500 rounded-full dark:bg-white/5 dark:text-white">
+      <button id="sidebar-btn" class="p-3 rounded-full">
+        <svg fill="currentColor" class="w-6 h-6" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1792 1792" xml:space="preserve">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier"> <title>fiction</title> 
+            <path d="M1673.9,1363.2L1673.9,1363.2c0,52.3-42.4,94.3-94.3,94.3H212.7c-52.3,0-94.3-42.4-94.3-94.3l0,0 c0-52.3,42.4-94.3,94.3-94.3h1366.8C1631.5,1268.5,1673.9,1310.9,1673.9,1363.2z"></path>
+            <path d="M1673.9,895.6L1673.9,895.6c0,52.3-42.4,94.3-94.3,94.3H659c-52.3,0-94.3-42.4-94.3-94.3l0,0c0-52.3,42.4-94.3,94.3-94.3 h920.6C1631.5,800.8,1673.9,843.2,1673.9,895.6z"></path> 
+            <path d="M1673.9,427.9L1673.9,427.9c0,52.3-42.4,94.3-94.3,94.3H212.7c-52.3,0-94.3-42.4-94.3-94.3l0,0c0-52.3,42.4-94.3,94.3-94.3 h1366.8C1631.5,333.2,1673.9,375.6,1673.9,427.9z"></path> 
+          </g>
+        </svg>
       </button>
     </div>
+
     <div>
       <img src="files/logo-dark.png" alt="logo" class="w-12 bg-white">
     </div>
+
     <div class="hidden md:block">
-      <input type="text" placeholder="جست و جو ..."
-        class="bg-slate-200 placeholder-slate-800 py-3 px-4 text-xs rounded-xl border-none outline-none w-24 md:w-80">
+      <input type="text" placeholder="... جست و جو "
+        class="w-24 md:w-80 bg-slate-200 placeholder:text-slate-800 text-xs text-right py-3 px- border-0 rounded-xl ">
+        <!--border-none outline-none  -->
     </div>
+
     <div class="flex gap-4 items-center">
-      <!-- Theme switcher in mobile mode -->
+      <!-- Theme switcher -->
       <div
         class="mobile__theme-switcher hidden md:block bg-gray-100 text-slate-500 p-3 rounded-full dark:bg-white/5 dark:text-white">
         <!-- sun icon -->
@@ -192,7 +205,7 @@ if ( is_home() ):
           </path>
         </svg>
       </div>
-      <!-- End theme switcher in mobile mode -->
+      <!-- End theme switcher -->
 
       <!-- sign up / login in mobile mode -->
       <div class="md:hidden bg-gray-100 text-slate-500 rounded-full dark:bg-white/5 dark:text-white">
@@ -209,20 +222,20 @@ if ( is_home() ):
       <!-- End sign up / login in mobile mode -->
 
       <div class="hidden md:block relative" x-data="{lang: false}">
-        <span x-on:click="lang = !lang" class="bg-slate-200 py-3 space-x-4 px-3 pl-7 text-xs rounded-xl"> فارسی - fa
+        <span x-on:click="lang = !lang" class="bg-slate-200 p-3 space-x-4 pl-7 text-xs rounded-xl"> fa - فارسی  
         </span>
-        <ul class="absolute top-10 rounded-xl bg-slate-200 min-w-28 text-sm" x-show="lang" x-transition.origin.top=""
+        <ul class="absolute top-10 bg-slate-200 min-w-24 text-xs rounded-xl" x-show="lang" x-transition.origin.top=""
           @click.outside="lang=false" style="display: none;">
           <li
-            class="p-2 hover:text-blue-600 dark:hover:text-blue-600 transition-all duration-200 ease-linear hover:mr-2">
+            class="p-2 hover:text-blue-600 dark:hover:text-blue-600 transition-all duration-400 ease-linear">
             <a href="#">
-              فارسی - fa
+              fa - فارسی 
             </a>
           </li>
           <li
-            class="p-2 hover:text-blue-600 dark:hover:text-blue-600 transition-all duration-200 ease-linear hover:mr-2">
+            class="p-2 hover:text-blue-600 dark:hover:text-blue-600 transition-all duration-400 ease-linear">
             <a href="#">
-              انگلیسی - en
+              en - انگلیسی
             </a>
           </li>
         </ul>
@@ -233,8 +246,9 @@ if ( is_home() ):
             clip-rule="evenodd"></path>
         </svg>
       </div>
+
       <div class="hidden md:flex">
-        <a href="#" class="flex items-center gap-2 bg-slate-200 text-slate-800 pl-6 py-3 px-3 text-xs rounded-xl">
+        <a href="#" class="flex items-center gap-2 bg-slate-200 text-slate-800 p-3 pl-6 text-xs rounded-xl">
           <span>ورود</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
             class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
@@ -246,8 +260,7 @@ if ( is_home() ):
             </path>
           </svg>
         </a>
-        <a href="#"
-          class="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 transition-all text-white -mr-5 py-3 px-3 text-xs rounded-xl">
+        <a href="#" class="flex items-center gap-2 bg-blue-500 hover:bg-blue-400 transition-all text-white mx-5 p-3 text-xs rounded-xl">
           <span>ثبت نام</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-add"
             viewBox="0 0 16 16">
